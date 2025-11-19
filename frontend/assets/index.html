@@ -1,0 +1,386 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GOLDEN-ticket🎟️</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+ <body>
+
+<section class="bg-[url('/assets/imgAcc.jpg')] bg-cover bg-center bg-no-repeat h-full min-flex items-center justify-center text-white p-10">
+<!-- 🔝 Barre de navigation -->
+<header class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-black/40 backdrop-blur-md text-white z-50">
+  
+  <!-- Bouton menu -->
+  <button id="menuBtn" 
+          class="flex items-center justify-center p-2 rounded-md hover:bg-white/20 transition"
+          title="Menu">
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         fill="none" 
+         viewBox="0 0 24 24" 
+         stroke-width="1.5" 
+         stroke="currentColor" 
+         class="w-7 h-7"> 
+    
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+  <h1 class="text-5xl font-bold tracking-wide">🎫 GOLDEN-ticket</h1>
+
+  <!-- Bouton profil -->
+  <button id="profileBtn" 
+          class="flex items-center justify-center p-2 rounded-full hover:bg-white/20 transition"
+          title="Profil">
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         fill="none" 
+         viewBox="0 0 24 24" 
+         stroke-width="1.5" 
+         stroke="currentColor" 
+         class="w-7 h-7">
+      <path stroke-linecap="round" stroke-linejoin="round" 
+            d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a8.25 8.25 0 0115 0" />
+    </svg>
+  </button>
+</header>
+
+<!-- 🔹 Menu latéral gauche -->
+<div id="sideMenu"class="fixed top-0 left-0 h-full w-64 bg-black/90 text-white transform -translate-x-full transition-transform duration-300 z-40 flex flex-col p-6 space-y-4">
+  <button id="closeMenu" class="self-end text-gray-300 hover:text-white">✖</button>
+  <a href="index.html" class="hover:text-yellow-400">🏠 Accueil</a>
+  <a href="evenement.html" class="hover:text-yellow-400">📅 Événements</a>
+  <a href="contact.html" class="hover:text-yellow-400">📞 Contact</a>
+</div>
+
+<!-- 🔸 Menu profil -->
+<div id="profileMenu"
+     class="absolute top-16 right-6 bg-white text-gray-800 rounded-lg shadow-lg w-48 hidden z-50">
+  <ul class="py-2 text-sm">
+    <li><a href="profil.html" class="block px-4 py-2 hover:bg-gray-100">Mon profil</a></li>
+    <li><a href="parametres.html" class="block px-4 py-2 hover:bg-gray-100">Paramètres</a></li>
+    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-100">Déconnexion</button></li>
+  </ul>
+</div>
+
+<!-- Contenu principal -->
+ <div >
+<div class="relative space-y-4 mt-24 text-black ml-60">
+  <h2 class="text-4xl font-bold text-yellow-400 ml-60">Bienvenue sur Golden-ticket</h2>
+  <p></p>
+</div>
+
+  <div class="flex flex-col space-y-4  " > 
+
+  <div class=" items-center space-y-4 mt-8">
+
+
+    
+    <!-- Barre de recherche -->
+    <!--<div class="relative w-100 m-10">
+    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400 pointer-events-none ">🔍</span>
+
+    <input 
+      id="searchInput"
+      type="text"
+      placeholder="Rechercher un événement..."
+      class="pl-10 pr-10 py-2 w-full rounded-full border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
+    />
+
+    <button 
+      id="clearBtn"
+      class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600 hidden"
+      title="Effacer"
+    >
+      ❌
+    </button>
+  </div>
+
+  <!-- Titre -->
+  
+</div>
+
+<!-- Liste des événements (vide au départ) -->
+<ul id="eventsList" class=" rounded-xl shadow-md p-4 w-96 space-y-2 text-gray-800 mt-4">
+  <!-- Les événements ajoutés par les organisateurs apparaîtront ici -->
+</ul>
+
+<p id="noResults" class="hidden text-gray-500 italic mt-2 ">Aucun résultat trouvé</p>
+
+
+
+    <!--pub-->
+
+   
+<div class=" text-white flex items-center justify-center carte bg-white/50 rounded-xl  hover:bg-white/50 cursor-pointer transition transform hover:scale-105 p-5 m-5">
+
+  <div class="w-full max-w-4xl overflow-hidden rounded-2xl shadow-lg relative">
+    
+    <!-- Slides container -->
+    <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+      
+      <!-- Slide 1 -->
+      <div class="w-full flex-shrink-0  flex flex-col justify-center items-center p-10">
+        <h1 class="text-4xl font-bold mb-4">Achetez vos tickets maintenant !</h1>
+        <p class="text-lg mb-6 text-center">Ne ratez pas les plus grands événements de l’année.</p>
+        <button class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Voir les offres</button>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="w-full flex-shrink-0 bg-gradient-to-r from-emerald-500 to-green-700 flex flex-col justify-center items-center p-10">
+        <h1 class="text-4xl font-bold mb-4"> Offres limitées !</h1>
+        <p class="text-lg mb-6 text-center">Profitez de réductions exclusives sur les billets de concert.</p>
+        <button class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Acheter maintenant</button>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="w-full flex-shrink-0 bg-gradient-to-r from-pink-500 to-red-600 flex flex-col justify-center items-center p-10">
+        <h1 class="text-4xl font-bold mb-4">Concerts, festivals et plus !</h1>
+        <p class="text-lg mb-6 text-center">Réservez vos places pour les meilleurs événements de votre ville.</p>
+        <button class="bg-white text-pink-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Découvrir</button>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="w-full flex-shrink-0 bg-gradient-to-r from-yellow-500 to-orange-600 flex flex-col justify-center items-center p-10">
+        <h1 class="text-4xl font-bold mb-4">💥 Nouvel an 2025</h1>
+        <p class="text-lg mb-6 text-center">Célébrez la nouvelle année avec des tickets VIP dès maintenant !</p>
+        <button class="bg-white text-yellow-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Réserver</button>
+      </div>
+
+    </div>
+
+    <!-- Boutons de navigation -->
+    <button id="prevBtn" class="absolute top-1/2 left-3 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full">
+      ⬅
+    </button>
+    <button id="nextBtn" class="absolute top-1/2 right-3 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full">
+      ➡
+    </button>
+
+    <!-- Indicateurs (petits points) -->
+    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2">
+      <span class="dot w-3 h-3 bg-white/50 rounded-full"></span>
+      <span class="dot w-3 h-3 bg-white/50 rounded-full"></span>
+      <span class="dot w-3 h-3 bg-white/50 rounded-full"></span>
+      <span class="dot w-3 h-3 bg-white/50 rounded-full"></span>
+    </div>
+
+  </div>
+
+  
+
+</div>
+
+
+
+   
+ 
+
+  <div class="text-center mb-10">
+    <h1 class="text-4xl font-bold mb-4 titre-app">🎫 GOLDEN-ticket</h1>
+    <div class="space-x-4">
+      <a href="login.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-2 rounded-lg shadow-lg transition-transform hover:scale-105 inline-block">
+  Espace Organisateur
+</a>
+  <a href="login1.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-2 rounded-lg shadow-lg transition-transform hover:scale-105 inline-block">
+  client
+</a>
+
+       
+    </div>
+  </div>
+
+  <!-- coter Organisateur -->
+  <section id="organisateur" class="page hidden text-center">
+    <h2 class="text-2xl font-semibold mb-6 text-black">Tableau de bord Organisateur</h2>
+    <div class="flex flex-col items-center space-y-4">
+      <div class="carte bg-black/20 rounded-xl p-6 w-72 hover:bg-white/30 cursor-pointer transition transform hover:scale-105 ">
+         <a href="evenement.html">Créer un événement</a>
+       </div>
+      <div class="carte bg-black/20 rounded-xl p-6 w-72 hover:bg-white/30 cursor-pointer transition transform hover:scale-105"> 
+        <a href="vente.html" class="block">Voir les ventes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Client -->
+  <section id="client" class="page hidden text-center">
+    <h2 class="text-2xl font-semibold mb-6 text-black">Espace Client</h2>
+    <div class="flex flex-col items-center space-y-4">
+      <div class="carte bg-black/20 rounded-xl p-6 w-72 hover:bg-white/30 cursor-pointer transition transform hover:scale-105"> 
+         <a href="acheter.html" class="block">Acheter un ticket</a>
+      </div>
+      <div class="carte bg-black/20 rounded-xl p-6 w-72 hover:bg-white/30 cursor-pointer transition transform hover:scale-105">
+         <a href="commande.html" class="block">Mes commandes</a>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+
+  <script>
+    // Animation d’entrée
+    gsap.from(".titre-app", { duration: 1, y: -40, opacity: 0, ease: "bounce" });
+    gsap.from("button", { duration: 1, opacity: 0, y: 20, stagger: 0.2, delay: 0.4 });
+
+    // Références
+    const organisateurPage = document.getElementById("organisateur");
+    const clientPage = document.getElementById("client");
+    const btnOrg = document.getElementById("btnOrganisateur");
+    const btnClient = document.getElementById("btnClient");
+
+    // Fonction pour afficher une page avec animation
+    function afficherPage(page) {
+      gsap.to(".page", { opacity: 0, duration: 0.3, onComplete: () => {
+        organisateurPage.classList.add("hidden");
+        clientPage.classList.add("hidden");
+
+        // Afficher la nouvelle page
+        page.classList.remove("hidden");
+        gsap.fromTo(page, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" });
+        gsap.fromTo(".carte", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, stagger: 0.2, delay: 0.3 });
+      }});
+    }
+
+    
+    btnOrg.addEventListener("click", () => afficherPage(organisateurPage));
+    btnClient.addEventListener("click", () => afficherPage(clientPage));
+
+    const events = []; // Liste vide au départ
+  const eventsList = document.getElementById('eventsList');
+  const searchInput = document.getElementById('searchInput');
+  const clearBtn = document.getElementById('clearBtn');
+  const noResults = document.getElementById('noResults');
+
+  // Affiche les événements
+  function displayEvents(filteredEvents) {
+    eventsList.innerHTML = '';
+    if (filteredEvents.length === 0) {
+      noResults.classList.remove('hidden');
+    } else {
+      noResults.classList.add('hidden');
+      filteredEvents.forEach(event => {
+        const li = document.createElement('li');
+        li.textContent = event;
+        li.className = 'p-2 rounded hover:bg-gray-100 cursor-pointer';
+        eventsList.appendChild(li);
+      });
+    }
+  }
+
+  // Recherche en direct
+  searchInput.addEventListener('input', () => {
+    const value = searchInput.value.toLowerCase();
+    clearBtn.classList.toggle('hidden', value === '');
+    const filtered = events.filter(event => event.toLowerCase().includes(value));
+    displayEvents(filtered);
+  });
+
+  // Bouton effacer
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    clearBtn.classList.add('hidden');
+    displayEvents(events);
+    searchInput.focus();
+  });
+
+  const menuBtn = document.getElementById("menuBtn");
+  const closeMenu = document.getElementById("closeMenu");
+  const sideMenu = document.getElementById("sideMenu");
+
+  const profileBtn = document.getElementById("profileBtn");
+  const profileMenu = document.getElementById("profileMenu");
+
+  // 🔹 Ouvrir le menu latéral
+  menuBtn.addEventListener("click", () => {
+    sideMenu.classList.remove("-translate-x-full");rdtcxcfx
+  });
+
+  // 🔹 Fermer le menu latéral
+  closeMenu.addEventListener("click", () => {
+    sideMenu.classList.add("-translate-x-full");
+  });
+
+  // 🔸 Ouvrir/fermer le menu profil
+  profileBtn.addEventListener("click", () => {
+    profileMenu.classList.toggle("hidden");
+  });
+
+  // 🔸 Fermer le menu profil quand on clique ailleurs
+  document.addEventListener("click", (e) => {
+    if (!profileBtn.contains(e.target) && !profileMenu.contains(e.target)) {
+      profileMenu.classList.add("hidden");
+    }
+  });
+   
+    const slider = document.getElementById('slider');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slider.children.length;
+    let currentIndex = 0;
+
+    function updateSlider() {
+      slider.style.transform = translateX(-$currentIndex )
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-white', i === currentIndex);
+        dot.classList.toggle('bg-white/50', i !== currentIndex);
+      });
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    });
+
+    // Défilement automatique toutes les 5 secondes
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    }, 5000);
+
+    // Initialisation
+    updateSlider();
+  
+
+
+  </script>
+  </section>
+  <section class=" w-screen h-screen bg-white">
+    <div> <h1> </h1></div>
+    <div class="flex">
+        <div class="carte bg-white/20 rounded-xl p-10 w-72 hover:bg-white/30 cursor-pointer shadow-lg transition transform hover:scale-105 m-10">
+                <h1></h1>
+                <p> </p> 
+                    <img src="./image/festiv.jpg" alt="">
+        </div>
+       
+        <div class="carte bg-white/20 rounded-xl p-10 w-72 hover:bg-white/30 cursor-pointer shadow-lg transition transform hover:scale-105 m-10">
+                <h1></h1>
+                <p> </p> 
+                    <img src="./image/lancement pr.jpg" alt="">
+        </div>
+        
+        <div class="carte bg-white/20 rounded-xl p-10 w-72 hover:bg-white/30 cursor-pointer shadow-lg transition transform hover:scale-105 m-10">
+                <h1></h1>
+                <p> </p> 
+                    <img src="./image/sport.jpeg" alt="">
+        </div>
+        
+        <div class="carte bg-white/20 rounded-xl p-10 w-72 hover:bg-white/30 cursor-pointer shadow-lg transition transform hover:scale-105 m-10">
+                <h1></h1>
+                <p> </p> 
+                    <img src="./image/miss.jpeg" alt="">
+        </div>
+    </div>
+
+  </section>
+</body>
+</html>

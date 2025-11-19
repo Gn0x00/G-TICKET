@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion Organisateur 🎟️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class=" w-screen h-screen bg-white bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center">
+  <div class="carte bg-white-200/20 rounded-xl p-6  hover:bg-white/30 cursor-pointer transition transform hover:scale-105 shadow-2xl rounded-xl ">
+<div class="text-6xl text-yellow-500 ml-10 font family">GOLDEN-TICKET🎟️</div>
+  <div class="carte bg-white-200/20 rounded-xl p-6  hover:bg-white/30 cursor-pointer transition transform hover:scale-105 shadow-2xl rounded-xl p-8 w-96 m-20">
+    <h1 class="text-2xl font-bold text-center mb-6 text-gray-800">Espace Organisateur</h1>
+
+    <form id="loginForm" class="space-y-4">
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Email</label>
+        <input type="email" id="email" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-400" required>
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Mot de passe</label>
+        <input type="password" id="password" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-400" required>
+      </div>
+
+      <button type="submit" class="bg-yellow-400 hover:bg-black w-full text-white font-semibold py-2 rounded-lg transition">
+        🔐 Se connecter
+      </button>
+    </form>
+
+    <p class="mt-4 text-sm text-center text-gray-500">
+      Pas encore de compte ? <a href="#" id="registerLink" class="text-yellow-600 hover:text-yellow-800 font-semibold">Créer un compte</a>
+    </p>
+
+    <p id="message" class="text-center text-red-500 mt-4"></p>
+  </div>
+</div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const registerLink = document.getElementById('registerLink');
+    const message = document.getElementById('message');
+
+    // Simuler une base locale d'organisateurs
+    let users = JSON.parse(localStorage.getItem('organisateurs')) || [];
+
+    // Si l'utilisateur veut créer un compte
+    registerLink.addEventListener('click', () => {
+      const email = prompt("Entrez votre email :");
+      const password = prompt("Choisissez un mot de passe :");
+
+      if (!email || !password) return alert("Email et mot de passe requis !");
+      if (users.find(u => u.email === email)) return alert("❌ Cet email existe déjà.");
+
+      users.push({ email, password });
+      localStorage.setItem('organisateurs', JSON.stringify(users));
+      alert("✅ Compte créé avec succès !");
+    });
+
+    // Connexion
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      const user = users.find(u => u.email === email && u.password === password);
+
+      if (user) {
+        localStorage.setItem('loggedOrganisateur', JSON.stringify(user));
+        window.location.href = "evenement.html";
+      } else {
+        message.textContent = "❌ Identifiants incorrects.";
+      }
+    });
+  </script>
+</body>
+</html>
