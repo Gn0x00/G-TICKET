@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créer un événement </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+ 
+<body class="flex  bg-white bg-cover bg-center bg-no-repeat min-h-screen items-center justify-center">
+      <div class="mx-20 w-1/2 max-w-md items-center carte bg-white-200/20 hover:bg-white-200/30 cursor-pointer transition transform hover:scale-105 shadow-2xl rounded-xl p-2"> 
+        <h1 class="text-2xl font-bold text-center mb-6 text-yellow-500">Créer un ticket</h1>
+        
+        <form id="eventForm" class="space-y-4 ">
+          <div>
+            <label class="block text-black font-medium mb-1">Nom de l'événement</label>
+            <input type="text" id="nom" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-400" required>
+          </div>
+          
+          <div>
+            <label class="block text-black font-medium mb-1">Date de debut</label>
+            <input type="date" id="date" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-400" required>
+          </div>
+
+          <div>
+            <label class="block text-black font-medium mb-1">Date de fin</label>
+            <input type="date" id="date" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-400" required>
+          </div>
+
+          <div>
+            <label class="block text-black font-medium mb-1">Lieu</label>
+            <input type="text" id="lieu" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-400" required>
+          </div>
+
+          <div>
+            <label class="block text-black font-medium mb-1">nombre </label>
+            <input type="number" id="prix" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-400" required>
+          </div>
+          
+          <div>
+            <label class="block text-black font-medium mb-1">prix(fcfa) </label>
+            <input type="number" id="prix" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-400" required>
+          </div>
+
+          <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 w-full text-black font-semibold py-2 rounded-lg transition">
+            ✅ Créer l'événement
+          </button>
+          <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 w-full text-black font-semibold py-2 rounded-lg transition">
+            voir mes ventes
+          </button>
+        </form>
+
+        <button onclick="retourAccueil()" class="mt-4 text-yellow-600 hover:text-yellow-800 w-full">⬅️ Retour à l'accueil</button>
+      </div>
+
+  <script>
+    const form = document.getElementById('eventForm');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nom = document.getElementById('nom').value.trim();
+      const date = document.getElementById('date').value;
+      
+      const lieu = document.getElementById('lieu').value.trim();
+      const prix = document.getElementById('prix').value;
+
+      if (!nom || !date || !lieu || !prix) {
+        alert("Merci de remplir tous les champs !");
+        return;
+      }
+
+      const nouvelEvenement = { nom, date, lieu, prix };
+
+      // Récupérer les anciens événements
+      const events = JSON.parse(localStorage.getItem('events')) || [];
+      events.push(nouvelEvenement);
+
+      // Sauvegarder
+      localStorage.setItem('events', JSON.stringify(events));
+
+      alert("🎉 Événement créé avec succès !");
+      form.reset();
+    });
+
+    function retourAccueil() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
+
+
+

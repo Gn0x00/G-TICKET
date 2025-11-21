@@ -10,9 +10,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
- <body>
+ <body class="bg-gray-300">
 
-<section class="bg-[url('/assets/imgAcc.jpg')] bg-cover bg-center bg-no-repeat h-full min-flex items-center justify-center text-white p-10">
+<section class="bg-[url('assets/imgAcc.jpg')] bg-cover bg-center bg-no-repeat h-full min-flex items-center justify-center text-white p-10">
 <!-- 🔝 Barre de navigation -->
 <header class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-black/40 backdrop-blur-md text-white z-50">
   
@@ -74,14 +74,14 @@
   <p></p>
 </div>
 
-  <div class="flex flex-col space-y-4  " > 
+  <!--<div class="flex flex-col space-y-4  " > 
 
   <div class=" items-center space-y-4 mt-8">
 
 
     
-    <!-- Barre de recherche -->
-    <!--<div class="relative w-100 m-10">
+    Barre de recherche
+    <div class="relative w-100 m-10">
     <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400 pointer-events-none ">🔍</span>
 
     <input 
@@ -100,9 +100,9 @@
     </button>
   </div>
 
-  <!-- Titre -->
+   Titre 
   
-</div>
+</div>-->
 
 <!-- Liste des événements (vide au départ) -->
 <ul id="eventsList" class=" rounded-xl shadow-md p-4 w-96 space-y-2 text-gray-800 mt-4">
@@ -349,38 +349,213 @@
     // Initialisation
     updateSlider();
   
-
+    
 
   </script>
-  </section>
-  <section class=" w-screen h-screen bg-white">
-    <div> <h1> </h1></div>
-    <div class="flex">
-        <div class="carte bg-white/20 rounded-xl p-10 w-72 hover:bg-white/30 cursor-pointer shadow-lg transition transform hover:scale-105 m-10">
-                <h1></h1>
-                <p> </p> 
-                    <img src="./image/festiv.jpg" alt="">
-        </div>
-       
-        <div class="carte bg-white/20 rounded-xl p-10 w-72 hover:bg-white/30 cursor-pointer shadow-lg transition transform hover:scale-105 m-10">
-                <h1></h1>
-                <p> </p> 
-                    <img src="./image/lancement pr.jpg" alt="">
-        </div>
-        
-        <div class="carte bg-white/20 rounded-xl p-10 w-72 hover:bg-white/30 cursor-pointer shadow-lg transition transform hover:scale-105 m-10">
-                <h1></h1>
-                <p> </p> 
-                    <img src="./image/sport.jpeg" alt="">
-        </div>
-        
-        <div class="carte bg-white/20 rounded-xl p-10 w-72 hover:bg-white/30 cursor-pointer shadow-lg transition transform hover:scale-105 m-10">
-                <h1></h1>
-                <p> </p> 
-                    <img src="./image/miss.jpeg" alt="">
-        </div>
-    </div>
 
   </section>
+
+  <!--tendance-->
+  <h2 class="text-center mt-40 text-b">tendance</h2>
+  
+  <SECTION>
+
+    <div class=" overflow-x-auto m-20 w-screenl h-[450px] flex">
+      <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+    
+      
+    </div>
+
+  </SECTION>
+  <!--nouveaux-->
+  <h2 class="text-center mt-40 text-b">nouveaux</h2>
+  
+  <SECTION class="">
+
+    <div class=" overflow-x-auto m-20 w-screenl h-[450px] flex">
+      <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+
+       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
+        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
+        <p class="mx-1 font-semibold">nom event</p>
+        <p class="mx-1">date debut</p>
+        <p class="mx-1">date fin</p>
+        <p class="mx-1">lieu</p>
+        <p class="mx-1 font-semibold">prix</p>
+
+        <div class="w-full text-center">
+          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
+
+        </div>
+
+      </div>
+    
+      
+    </div>
+
+  </SECTION>
+
+
 </body>
 </html>

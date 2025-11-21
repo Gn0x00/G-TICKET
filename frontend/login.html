@@ -7,11 +7,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class=" w-screen h-screen bg-white bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center">
-  <div class="carte bg-white-200/20 rounded-xl p-6  hover:bg-white/30 cursor-pointer transition transform hover:scale-105 shadow-2xl rounded-xl ">
-<div class="text-6xl text-yellow-500 ml-10 font family">GOLDEN-TICKET🎟️</div>
-  <div class="carte bg-white-200/20 rounded-xl p-6  hover:bg-white/30 cursor-pointer transition transform hover:scale-105 shadow-2xl rounded-xl p-8 w-96 m-20">
-    <h1 class="text-2xl font-bold text-center mb-6 text-gray-800">Espace Organisateur</h1>
+<body>
+  <section class=" h-screen flex carte">
+<div class="w-1/2 h-full text-6xl text-yellow-500 ml-10 font family"><img src="assets/imgT.jpg" alt="" class="object-cover h-full"></div>
+<div class="w-1/2 bg-neutral-100">
+  <div class= "  p-8 my-20 mr-20 pt-60 pr-50">
+    <h1 class="text-2xl font-bold text-center mb-6 text-gray-800">bon Retour parmis nous</h1>
 
     <form id="loginForm" class="space-y-4">
       <div>
@@ -24,8 +25,8 @@
         <input type="password" id="password" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-yellow-400" required>
       </div>
 
-      <button type="submit" class="bg-yellow-400 hover:bg-black w-full text-white font-semibold py-2 rounded-lg transition">
-        🔐 Se connecter
+      <button type="submit" class="bg-yellow-400 hover:bg-black w-full text-white font-semibold py-2 rounded-md transition">
+         Se connecter
       </button>
     </form>
 
@@ -34,8 +35,9 @@
     </p>
 
     <p id="message" class="text-center text-red-500 mt-4"></p>
+    </div>
   </div>
-</div>
+</section>
 
   <script>
     const form = document.getElementById('loginForm');
