@@ -2,6 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GOLDEN-ticket🎟️</title>
   
@@ -10,99 +12,42 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
- <body class="bg-gray-300">
+ <body class="">
 
-<section class="bg-[url('assets/imgAcc.jpg')] bg-cover bg-center bg-no-repeat h-full min-flex items-center justify-center text-white p-10">
-<!-- 🔝 Barre de navigation -->
-<header class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-black/40 backdrop-blur-md text-white z-50">
-  
-  <!-- Bouton menu -->
-  <button id="menuBtn" 
-          class="flex items-center justify-center p-2 rounded-md hover:bg-white/20 transition"
-          title="Menu">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke-width="1.5" 
-         stroke="currentColor" 
-         class="w-7 h-7"> 
-    
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-  </button>
+  <header class="  flex items-center justify-between py-5 px-4 bg-white shadow">
 
-  <h1 class="text-5xl font-bold tracking-wide">🎫 GOLDEN-ticket</h1>
+    <div class="flex items-center space-x-8">
+      <span class="font-bold text-lg"><a href="index.html">🎟️GOLDEN-ticket</a></span>
+      <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
 
-  <!-- Bouton profil -->
-  <button id="profileBtn" 
-          class="flex items-center justify-center p-2 rounded-full hover:bg-white/20 transition"
-          title="Profil">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         fill="none" 
-         viewBox="0 0 24 24" 
-         stroke-width="1.5" 
-         stroke="currentColor" 
-         class="w-7 h-7">
-      <path stroke-linecap="round" stroke-linejoin="round" 
-            d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a8.25 8.25 0 0115 0" />
-    </svg>
-  </button>
+        <a href="evenements.html" class="font-bold hover:border-b-2 transition-transform" >Evénements</a>
+        <a href="organisateurEv.html" class="font-bold hover:border-b-2">Organisateur</a>
+        <a href="" >À propos </a>
+      </nav>
+  </div>
+  <div class="flex items-center space-x-5 ">
+    <a href="login.html"><button class=" font-semibold flex justify-between hover:bg-yellow-400 px-4 py-1 rounded text-gray-700"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+</svg> Connection</button></a>
+    <button class=" bg-[#D4AF37] text-white  px-4 py-2 rounded hover:bg-yellow-400 font-semibold">
+      Créer un événement
+    </button>
+  </div>
 </header>
 
-<!-- 🔹 Menu latéral gauche -->
-<div id="sideMenu"class="fixed top-0 left-0 h-full w-64 bg-black/90 text-white transform -translate-x-full transition-transform duration-300 z-40 flex flex-col p-6 space-y-4">
-  <button id="closeMenu" class="self-end text-gray-300 hover:text-white">✖</button>
-  <a href="index.html" class="hover:text-yellow-400">🏠 Accueil</a>
-  <a href="evenement.html" class="hover:text-yellow-400">📅 Événements</a>
-  <a href="contact.html" class="hover:text-yellow-400">📞 Contact</a>
-</div>
+<section class="  bg-cover bg-center bg-no-repeat h-full min-flex items-center justify-center text-white p-10" style="background-image:url('assets/imgAcc.jpg')" >
 
-<!-- 🔸 Menu profil -->
-<div id="profileMenu"
-     class="absolute top-16 right-6 bg-white text-gray-800 rounded-lg shadow-lg w-48 hidden z-50">
-  <ul class="py-2 text-sm">
-    <li><a href="profil.html" class="block px-4 py-2 hover:bg-gray-100">Mon profil</a></li>
-    <li><a href="parametres.html" class="block px-4 py-2 hover:bg-gray-100">Paramètres</a></li>
-    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-100">Déconnexion</button></li>
-  </ul>
-</div>
 
 <!-- Contenu principal -->
  <div >
-<div class="relative space-y-4 mt-24 text-black ml-60">
-  <h2 class="text-4xl font-bold text-yellow-400 ml-60">Bienvenue sur Golden-ticket</h2>
+<div class="text-center w-full mt-24 text-black">
+  <h2 class="text-4xl font-bold text-[#D4AF37] ml-60">Bienvenue sur Golden-ticket</h2>
+  <p class="text-xl text-[#D4AF37] font-bold">Découvrez et réservez vos billetts pour les meilleurs 
+    concerts, festivals, conférences et événements sportifs</p>
   <p></p>
 </div>
 
-  <!--<div class="flex flex-col space-y-4  " > 
-
-  <div class=" items-center space-y-4 mt-8">
-
-
-    
-    Barre de recherche
-    <div class="relative w-100 m-10">
-    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400 pointer-events-none ">🔍</span>
-
-    <input 
-      id="searchInput"
-      type="text"
-      placeholder="Rechercher un événement..."
-      class="pl-10 pr-10 py-2 w-full rounded-full border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
-    />
-
-    <button 
-      id="clearBtn"
-      class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600 hidden"
-      title="Effacer"
-    >
-      ❌
-    </button>
-  </div>
-
-   Titre 
   
-</div>-->
 
 <!-- Liste des événements (vide au départ) -->
 <ul id="eventsList" class=" rounded-xl shadow-md p-4 w-96 space-y-2 text-gray-800 mt-4">
@@ -116,9 +61,9 @@
     <!--pub-->
 
    
-<div class=" text-white flex items-center justify-center carte bg-white/50 rounded-xl  hover:bg-white/50 cursor-pointer transition transform hover:scale-105 p-5 m-5">
+<div class=" text-white flex items-center justify-center carte  rounded-xl cursor-pointer transition transform hover:scale-105 p-5 m-5">
 
-  <div class="w-full max-w-4xl overflow-hidden rounded-2xl shadow-lg relative">
+  <div class="w-full bg-white/50 max-w-4xl overflow-hidden rounded-2xl shadow-lg relative">
     
     <!-- Slides container -->
     <div id="slider" class="flex transition-transform duration-700 ease-in-out">
@@ -183,10 +128,10 @@
   <div class="text-center mb-10">
     <h1 class="text-4xl font-bold mb-4 titre-app">🎫 GOLDEN-ticket</h1>
     <div class="space-x-4">
-      <a href="login.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-2 rounded-lg shadow-lg transition-transform hover:scale-105 inline-block">
+      <a href="login.html" class="bg-[#D4AF37] hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-2 rounded-lg shadow-lg transition-transform hover:scale-105 inline-block">
   Espace Organisateur
 </a>
-  <a href="login1.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-2 rounded-lg shadow-lg transition-transform hover:scale-105 inline-block">
+  <a href="login1.html" class="bg-[#D4AF37] hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-2 rounded-lg shadow-lg transition-transform hover:scale-105 inline-block">
   client
 </a>
 
@@ -352,210 +297,106 @@
     
 
   </script>
+  
 
   </section>
+<div class=" flex m-5 items-center pb-3 border-b">
+  <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+</svg>
+</span>
+  <input type="search" class="  w-full md:w-96 px-4 py-2 rounded border-yellow-300 shadow focus:ring-0 focus:border-yellow-300" placeholder="rechercher un événement">
+</div>
 
-  <!--tendance-->
-  <h2 class="text-center mt-40 text-b">tendance</h2>
+
+<!--tendance-->
+  <h2 class="text-center mt-4 text-2xl mb-7 font-bold">tendance</h2>
   
-  <SECTION>
+  <SECTION class="pb-5 ">
 
-    <div class=" overflow-x-auto m-20 w-screenl h-[450px] flex">
-      <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-    
-      
+    <div class="m-5 bg-white rounded-xl shadow-lg overflow-hidden w-80 flex flex-col">
+  <div class="relative">
+    <img src="assets/imgT.jpg" class="w-full h-40 object-cover" />
+    <span class="absolute top-4 right-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Festival</span>
+  </div>
+  <div class="p-5 grow flex flex-col justify-between">
+    <h3 class="font-bold text-lg mb-2">nom de l'événement</h3>
+    <ul class="text-gray-600 text-sm mb-4 space-y-1">
+      <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-600" fill="none" ...><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
+</svg></svg> date</li>
+      <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-600" fill="none" ...><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+</svg></svg> lieu, ville</li>
+      <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-600" fill="none" ...><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" />
+</svg>
+</svg>places disponibles</li>
+    </ul>
+    <div class="flex items-center justify-between mt-auto">
+      <span class="text-yellow-800 font-bold text-xl">prix</span>
+      <a href="event.html"><button class="bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-700 transition">Réserver</button></a>
     </div>
+  </div>
+</div>
 
   </SECTION>
   <!--nouveaux-->
-  <h2 class="text-center mt-40 text-b">nouveaux</h2>
+  <h2 class="text-center mt-20 font-bold text-2xl">nouveaux</h2>
   
-  <SECTION class="">
+  <SECTION>
 
-    <div class=" overflow-x-auto m-20 w-screenl h-[450px] flex">
-      <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-
-       <div class="min-w-[220px] w-[220px] h-[430px] border-[2px] rounded-md  mx-3">
-        <div class="w-full h-[250px] border-b-[5px] border-b-yellow-500 rounded-xl"><img class="h-full object-cover" src="assets/imgT.jpg" alt=""></div>
-        <p class="mx-1 font-semibold">nom event</p>
-        <p class="mx-1">date debut</p>
-        <p class="mx-1">date fin</p>
-        <p class="mx-1">lieu</p>
-        <p class="mx-1 font-semibold">prix</p>
-
-        <div class="w-full text-center">
-          <button class=" border px-2 rounded-md bg-yellow-500 mt-7"><a href="">acheter le ticket</a></button>
-
-        </div>
-
-      </div>
-    
-      
+    <div class="m-5 bg-white rounded-xl shadow-lg overflow-hidden w-80 flex flex-col">
+  <div class="relative">
+    <img src="assets/imgT.jpg" class="w-full h-40 object-cover" />
+    <span class="absolute top-4 right-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Festival</span>
+  </div>
+  <div class="p-5 grow flex flex-col justify-between">
+    <h3 class="font-bold text-lg mb-2">nom de l'événement</h3>
+    <ul class="text-gray-600 text-sm mb-4 space-y-1">
+      <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-600" fill="none" ...><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
+</svg></svg> date</li>
+      <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-600" fill="none" ...><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+</svg></svg> lieu, ville</li>
+      <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-600" fill="none" ...><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" />
+</svg>
+</svg>places disponibles</li>
+    </ul>
+    <div class="flex items-center justify-between mt-auto">
+      <span class="text-yellow-800 font-bold text-xl">prix</span>
+      <button class="bg-yellow-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-700 transition">Réserver</button>
     </div>
+  </div>
+</div>
 
   </SECTION>
 
+  <footer class=" shadow-2xl shadow-black absolute flex w-full mt-11 h-1/4 ">
+    <div class=" flex w-full h-full ">
+      <div class=" w-1/2 text-center p-5">
+        <h2 class="font-bold mb-5">DESCRIPTION</h2>
+          <p>Golden Ticket : votre solution facile et rapide 
+            pour acheter des billets d'événements en un clic.</p>
+      </div>
+
+      <div class=" w-1/2 text-center p-5">
+        <h2 class="font-bold mb-5 ">Nos contact</h2>
+        <ul>
+          <li class=""><a href=""><ion-icon name="logo-twitter" class="m-1"></ion-icon></a></li>
+          <li><a href=""><ion-icon name="logo-instagram">instagram</ion-icon></a></li>
+          <li><a href=""><ion-icon name="logo-facebook">facebook</ion-icon></a></li>
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
 
 </body>
 </html>

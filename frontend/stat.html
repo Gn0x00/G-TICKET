@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <title>stats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="  flex items-center justify-between py-5 px-4 bg-white shadow">
+
+    <div class="flex items-center space-x-8">
+      <span class="font-bold text-lg"><a href="index.html">🎟️GOLDEN-ticket</a></span>
+      <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
+
+        <a href="#" class="font-bold hover:border-b-2 transition-transform" >Evénements</a>
+        <a href="organisateurEv.html" class="font-bold hover:border-b-2">Organisateur</a>
+        <a href="" >À propos </a>
+      </nav>
+  </div>
+  <div class="flex items-center space-x-5 ">
+    <a href="login.html"><button class=" font-semibold flex justify-between hover:bg-yellow-400 px-4 py-1 rounded text-gray-700"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+</svg> Connection</button></a>
+    <button class=" bg-[#D4AF37] text-white  px-4 py-2 rounded hover:bg-yellow-400 font-semibold">
+      Créer un événement
+    </button>
+  </div>
+</header>
+    <div class="flex">
+        <div class="w-3/4 mx-11 my-11">
+            <div class=" border-b pb-4">
+                <div class=" pb-6">
+                    <img class="cover w-full" src="assets/imgAcc.jpg" alt="">
+                </div>
+                <input title="image" id="inp" type="file" >
+            </div>
+
+            <div class="">
+                <ul>
+                    <li class="m-2 font-semibold">
+                        tickets vendu :
+                    </li>
+                    <li class="m-2 font-semibold">
+                        prix unitaire :
+                    </li>
+                    <li class="m-2 font-semibold">
+                        places restantes :
+                    </li>
+                    <li class="m-2">
+                        date
+                    </li>
+                    <li class="m-2">
+                        lieu, ville
+                    </li>
+                    <li>
+                        description :
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <footer class=" shadow-2xl shadow-black absolute flex w-full mt-11 h-1/4 ">
+    <div class=" flex w-full h-full ">
+      <div class=" w-1/2 text-center p-5">
+        <h2 class="font-bold mb-5">DESCRIPTION</h2>
+          <p>Golden Ticket : votre solution facile et rapide 
+            pour acheter des billets d'événements en un clic.</p>
+      </div>
+
+      <div class=" w-1/2 text-center p-5">
+        <h2 class="font-bold mb-5 ">Nos contact</h2>
+        <ul>
+          <li class=""><a href=""><ion-icon name="logo-twitter" class="m-1"></ion-icon></a></li>
+          <li><a href=""><ion-icon name="logo-instagram">instagram</ion-icon></a></li>
+          <li><a href=""><ion-icon name="logo-facebook">facebook</ion-icon></a></li>
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
